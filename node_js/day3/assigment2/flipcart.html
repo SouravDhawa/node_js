@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function shoes(b,p){
+        this.brand=b
+        this.seller="flipcart"
+        this.price=p
+    }
+
+shoes.prototype.cupon=function(){
+    console.log("20% discount on this product")
+}
+    let s1=new shoes("nike",3000);
+    let s2=new shoes("nike",4000);
+
+    console.log(s1)
+    s1.cupon();
+
+    
+
+</script>

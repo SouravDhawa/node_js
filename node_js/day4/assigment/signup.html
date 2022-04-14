@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+        <style>
+            #signup-form-div{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+            #email{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px;
+            }
+            #password{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px; 
+            }
+            #name{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px;
+            }
+            #number{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px;
+            }
+            #submit{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+       
+        <a href="login.html"> <button>login</button></a>
+        <div id="signup-form-div">
+            <h1>sign in page</h1>
+            <form onsubmit="userdetails(event)" id="user">
+                <!--Write form input elements here-->
+                <input type="email" id="email" placeholder="enter email"><br><br>
+                <input type="password" id="password" placeholder="enter password"><br><br>
+                <input type="text" id="name" placeholder="enter user id"><br><br>
+                <input type="number" id="number" placeholder="enter number"><br><br>
+                <input type="submit"  id="submit"><br><br>
+            </form>
+
+        </div>
+    </body>
+
+</html>
+<script src="./scripts/signup.js"></script>

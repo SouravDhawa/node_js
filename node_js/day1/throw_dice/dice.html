@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            display: flex;
+
+        }
+        #main>div{
+            width: 50%;
+            height: 50px;
+        }
+    </style>
+    <style>
+        /* .A{
+            border: 1px solid black;
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div id="winner"></div>
+    <div id="main">
+        <div id="member1">Member a</div>
+        <div id="member2">Member b</div>
+        <div id="member3">Member c</div>
+    </div>
+    <button id="roll">ROLL THE DICE</button>
+</body>
+</html>
+<script>
+document.querySelector("button").addEventListener("click",member1)
+function member1(){
+   event.preventDefault()
+   var a=document.querySelector("#member1");
+   a.innerHTML=Math.floor(Math.random()*6)+1;
+   var b=document.querySelector("#member2");
+   b.innerHTML=Math.floor(Math.random()*6)+1;
+   var c=document.querySelector("#member3");
+   c.innerHTML=Math.floor(Math.random()*6)+1;
+
+
+// console.log(a.innerHTML,b.innerHTML)
+
+win=document.querySelector("#winner");
+
+for(var i=0;i<3;i++){
+if(a.innerHTML>b.innerHTML && a.innerHTML>c.innerHTML){
+    win.innerHTML="member_a"
+    
+}else if(b.innerHTML>a.innerHTML && b.innerHTML>c.innerHTML){
+    win.innerHTML="member_b"
+}else if(c.innerHTML>a.innerHTML && c.innerHTML>b.innerHTML){
+    win.innerHTML="member_c"
+}else if(a.innerHTML==b.innerHTML && a.innerHTML>c.innerHTML || c.innerHTML==a.innerHTML && a.innerHTML>b.innerHTML  || b.innerHTML==c.innerHTML && b.innerHTML>a.innerHTML){
+    win.innerHTML="tie"
+}else if((c.innerHTML==a.innerHTML)&& (b.innerHTML==a.innerHTML)&& (c.innerHTML==b.innerHTML)){
+    win.innerHTML="tie"
+}
+}
+
+if(a.innerHTML>b.innerHTML && a.innerHTML>c.innerHTML){
+    document.querySelector("#member1").style.backgroundColor="green"
+    if(b.innerHTML>c.innerHTML){
+        document.querySelector("#member2").style.backgroundColor="yellow"
+        document.querySelector("#member3").style.backgroundColor="red"
+    }
+    else{
+        document.querySelector("#member3").style.backgroundColor="yellow"
+        document.querySelector("#member2").style.backgroundColor="red"
+    }
+}
+
+if(b.innerHTML>a.innerHTML && b.innerHTML>c.innerHTML){
+    document.querySelector("#member2").style.backgroundColor="green"
+    if(a.innerHTML>c.innerHTML){
+        document.querySelector("#member1").style.backgroundColor="yellow"
+        document.querySelector("#member3").style.backgroundColor="red"
+    }
+    else{
+        document.querySelector("#member3").style.backgroundColor="yellow"
+        document.querySelector("#member1").style.backgroundColor="red"
+    }
+}
+
+if(c.innerHTML>a.innerHTML && c.innerHTML>a.innerHTML){
+    document.querySelector("#member3").style.backgroundColor="green"
+    if(a.innerHTML>b.innerHTML){
+        document.querySelector("#member1").style.backgroundColor="yellow"
+        document.querySelector("#member2").style.backgroundColor="red"
+    }
+    else{
+        document.querySelector("#member2").style.backgroundColor="yellow"
+        document.querySelector("#member1").style.backgroundColor="red"
+    }
+}
+
+if(c.innerHTML==a.innerHTML && a.innerHTML>b.innerHTML){
+    document.querySelector("#member3").style.backgroundColor="blue"
+    document.querySelector("#member1").style.backgroundColor="blue"
+}else if(b.innerHTML==a.innerHTML && a.innerHTML>c.innerHTML){
+    document.querySelector("#member2").style.backgroundColor="blue"
+    document.querySelector("#member1").style.backgroundColor="blue"
+}else if(b.innerHTML==c.innerHTML && b.innerHTML>a.innerHTML){
+    document.querySelector("#member3").style.backgroundColor="blue"
+    document.querySelector("#member2").style.backgroundColor="blue"
+}
+}
+
+</script>

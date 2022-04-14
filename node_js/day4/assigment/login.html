@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <style>
+            #login-form-div{
+                /* border: 1px solid black; */
+                width: 50%;
+                margin: auto;
+                text-align: center;
+            }
+            #email{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px;
+            }
+            #password{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px; 
+            }
+            #submit{
+                padding: 6px 50px 6px 50px;
+                font-size: 20px; 
+            }
+        </style>
+    </head>
+
+    <body>
+       
+        <div id="login-form-div">
+            <h1>log in page</h1>
+            <form onsubmit="userdetails(event)" id="user">
+                <!--Write form input elements here-->
+                <input type="email" id="email" placeholder="enter email"><br><br>
+                <input type="password" id="password" placeholder="enter password"><br><br>
+           
+                <input type="submit"  id="submit"><br><br>
+
+            </form>
+
+        </div>
+    </body>
+
+</html>
+<script src="./scripts/login.js"></script>
